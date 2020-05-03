@@ -24,7 +24,6 @@ def main():
                         articleLinks.append(baseHref + a['href'])
                         ongoingHrefs.append(baseHref + a['href'])
                         levelHref[baseHref + a['href']] = levelHref[h] + 1
-                        print(levelHref[baseHref + a['href']])
                 links[h] = articleLinks
             except:
                 print("invalid href")
