@@ -2,8 +2,8 @@
 
 A python script that creates the graph of Wikipedia articles that link to each other leveraging the graph database 
 neo4j. Provided a starting Wikipedia link and the number of levels to travel from the starting Wikipedia link, it
-creates a graph in Neo4j containing a node for every Wikipedia link within the certain number of levels and a
-relationship for every Wikipedia link that link to another within the graph.
+creates a graph in Neo4j containing a node for every Wikipedia link within the certain number of levels of the starting 
+Wikipedia link and a relationship for every Wikipedia page that links to another Wikipedia page within the graph.
 
 to create the Neo4j graph:
 
