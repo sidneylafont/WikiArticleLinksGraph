@@ -7,8 +7,8 @@ Wikipedia link and a relationship for every Wikipedia page that links to another
 
 to create the Neo4j graph:
 
-        $ cd # WikiArticleLinksGraph
-        $ python linksToNeo4j.py link-to-starting-Wikipedia-link number-of-levels-to-travel 
+        $ cd WikiArticleLinksGraph
+        $ python linksToNeo4j.py address-of-starting-Wikipedia-page number-of-levels-to-travel 
 
 # Example
 
@@ -18,9 +18,7 @@ For example to create a graph starting at https://en.wikipedia.org/wiki/Rainbow 
         $ python linksToNeo4j.py https://en.wikipedia.org/wiki/Rainbow 3
         
 Notes:
-- you have to insert your own Neo4j password into linksToNeo4j.py on line 34
-- i HIGHLY recommend having the number of levels to travel be less than 6 or else it will take a while to run the script
-       
+- you have to insert your own Neo4j password into linksToNeo4j.py on line 34    
 
 # Packages
 
