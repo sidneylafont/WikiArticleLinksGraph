@@ -1,40 +1,36 @@
 # WikiArticleLinksGraph
 
-A python script that 
+A python script that creates the graph of Wikipedia articles that link to each other leveraging the graph database 
+neo4j. Provided a starting Wikipedia link and the number of levels to travel from the starting Wikipedia link, it
+creates a graph in Neo4j containing a node for every Wikipedia link within the certain number of levels and a
+relationship for every Wikipedia link that link to another within the graph.
 
+to create the Neo4j graph:
 
-
-
-A python script that blurs images using a gaussian blur
-
-to blur an image using terminal:
-
-        $ cd Blur
-        $ python blur.py path-to-image 
-
-This will add the blurred image, originalimagenameblurred.png, to the image folder
+        $ cd # WikiArticleLinksGraph
+        $ python linksToNeo4j.py link-to-starting-Wikipedia-link number-of-levels-to-travel 
 
 # Example
 
-For example to blur pre1.jpg:
+For example to create a graph starting at https://en.wikipedia.org/wiki/Rainbow and traveling 3 layers
 
         $ cd Blur
-        $ python blur.py images/pre1.jpg 
-
-Here are a series of images that have been blurred using the blur.py script:
-
-![pre1.jpg](/images/pre1.jpg)
-![pre1.jpg](/images/pre1blurred.jpg)
-![pre1.jpg](/images/pre1blurredblurred.jpg)
-![pre1.jpg](/images/pre1blurredblurredblurred.jpg)
-![pre1.jpg](/images/pre1blurredblurredblurredblurred.jpg)
-![pre1.jpg](/images/pre1blurredblurredblurredblurredblurred.jpg)
-![pre1.jpg](/images/pre1blurredblurredblurredblurredblurredblurred.jpg)
-![pre1.jpg](/images/pre1blurredblurredblurredblurredblurredblurredblurred.jpg)
+        $ python linksToNeo4j.py https://en.wikipedia.org/wiki/Rainbow 3
+        
+Notes:
+- you have to insert your own Neo4j password into linksToNeo4j.py on line 34
+- i HIGHLY recommend having the number of levels to travel be less than 6 or else it will take a while to run the script
+       
 
 # Packages
 
-- Pillow (PIL)
-- numpy
+- py2neo
+- bs4
+- urllib.request
+- json
 - sys
+
+# Database Technologies
+
+- Neo4j
 

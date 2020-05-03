@@ -1,7 +1,6 @@
 import sys
 import urllib.request as urllib
 from bs4 import BeautifulSoup
-import json
 from py2neo import Graph, Node, Relationship
 import json
 
