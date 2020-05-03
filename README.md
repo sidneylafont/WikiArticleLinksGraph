@@ -8,7 +8,7 @@ Wikipedia link and a relationship for every Wikipedia page that links to another
 to create the Neo4j graph:
 
         $ cd WikiArticleLinksGraph
-        $ python linksToNeo4j.py address-of-starting-Wikipedia-page number-of-levels-to-travel 
+        $ python linksToNeo4j.py link-of-starting-Wikipedia-page number-of-levels-to-travel 
 
 # Example
 
